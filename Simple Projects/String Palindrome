@@ -5,3 +5,4 @@ public static boolean isPal(String str){
         }
         int smth = str.compareTo(rev);
         return smth == 0;
+}
