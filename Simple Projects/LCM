@@ -7,5 +7,18 @@ public static int lcm(int a, int b){
             max++;
         }
     }
+  //---> Time Complexity = O(a*b-max(a,b))
     
-    //---> Time Complexity = O(a*b-max(a,b))
+  //--- Efficient Method ---//
+    
+public static int gcd(int a, int b) {
+        if (b==0) {
+            return a;
+        }
+        else{
+            return gcd(b,a%b);
+        }
+    }
+public static int lcm(int a, int b){
+        return (a*b)/gcd(a,b);
+    }
