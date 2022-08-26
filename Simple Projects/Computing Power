@@ -1,0 +1,12 @@
+public static int numPow(int x, int n) {
+        int num=0;
+        if (n==0){
+            return 1;
+        }
+        if (n % 2 == 0) {
+            num=numPow(x,n/2)*numPow(x,n/2);
+        }
+        else {
+            num=numPow(x,n/2)*numPow(x,n/2)*x;
+        }
+        return num;
